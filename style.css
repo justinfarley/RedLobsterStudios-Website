@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*#region Fonts*/
+@font-face {
+    font-family: 'Harlow Solid Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Harlow Solid Italic'), url('Fonts/HARLOWSI_1.woff') format('woff');
+}
+
+/*#endregion*/
+
+
+/*#region Navigation*/
+
+.navbar {
+    font-size: 2.25rem;
+}
+
+#navigation {
+    background-image: url("images/nav-background.png");
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    border: 2px solid black;
+}
+
+/*#region Nav Links*/
+
+a.navbarlink {
+    /*color: #8C233C;*/
+    font-family: 'Agbalumo';
+    color: #000;
+    text-shadow: #FFF 2px 2px 5px,
+                 #FFF -2px -2px 5px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+a.navbarlink:hover{
+    color: #FFF;
+    text-shadow: #000 2px 2px 10px,
+                 #000 -2px -2px 10px;
+}
+
+/*#endregion*/
+
+/*#endregion*/
+
+/*#region Content*/
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    height: 10px;
+    border: 0px;
+    background-color: #703269;
+    background-image: linear-gradient(to right, rgb(129, 0, 0), transparent, rgb(129, 0, 0)), 
+    linear-gradient(transparent, rgba(0,0,0,0.55) 150%);
+}
+
+.header-text{
+    text-align: center;
+    color: #cc004e;
+    text-shadow: #000 10px 10px 20px,
+                 #000 -10px -10px 20px;
+    width: 100%;
+    font-family: 'Maname', serif;
+    font-size: 6rem;
+}
+
+/*#region Newest Content*/
+
+#newest-content-header-text{
+    text-align: center;
+    color: #cc004e;
+    text-shadow: #000 10px 10px 20px,
+                 #000 -10px -10px 20px;
+    width: 100%;
+    font-family: 'Maname', serif;
+    font-size: 6rem;
+}
+
+#newest-content {
+    background-image: url("images/new-content-background.png");
+    padding: 20px 0 0 0;
+    height: 60rem;
+}
+
+#Super-Paxton-Palace {
+    padding: 50px 0 0 0;
+    text-align: center;
+    align-self: center;
+    vertical-align: middle;
+}
+
+#Super-Paxton-Palace label {
+    display: block;
+    color: #f9a7d3;
+    padding: 0 0 20px 0;
+    text-shadow: #703269 3px 3px,
+                 #703269 -3px -3px;
+    text-align: center;
+    font-family: 'Harlow Solid Italic';
+    font-size: 50px;
+}
+
+iframe:hover {
+    border: 1px solid white;
+}
+
+/*#endregion*/
+
+/*#region Meet the Creators*/
+
+#meet-the-creators{
+    background-image: url("images/meet-the-creators-background.png");
+    text-align: center;
+    width: 100%;
+    height: 120rem;
+}
+
+.meet-the-creators-paragraph{
+    display: inline-block;
+    font-family: 'DM Sans';
+    font-size: 45px;
+    font-weight: 800;
+    color: #cc004e;
+    width: 75%;
+    padding: 5rem 0;
+}
+
+.headshot-img {
+    border-radius: 50%;
+    border: 4px solid rgb(173, 8, 8);
+}
+
+.creator-figure{
+    padding: 50px 0 0 0;
+    text-align: center;
+}
+
+.meet-the-creators-sub-header {
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Agbalumo';
+    font-size: 5rem;
+    color: #cc0033;
+    text-shadow: #FFF 2px 2px,
+                 #FFF 0px 2px,
+                 #FFF 2px 0px,
+                 #FFF 0px -2px,
+                 #FFF -2px 0px,
+                 #FFF -2px -2px;
+}
+
+
+/*#endregion*/
+#top-link {
+    font-size: 2rem;
+    position: sticky;
+    display: inline;
+    top: 93%;
+    right: 93%;
+    padding: 10px;
+}
+#top-link a {
+    position: relative;
+    display: inline;
+}
+
+/*#endregion*/
+
+/*#region Footer*/
+
+footer {
+    bottom: 0;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+}
+
+footer b {
+    text-align: center;
+}
+
+
+#rls-footer-text {
+    display: inline;
+}
+
+/*#endregion*/
