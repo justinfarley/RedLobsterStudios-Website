@@ -14,6 +14,9 @@
 
 /*#endregion*/
 
+.test {
+    border: 5px solid red;
+}
 
 /*#region Navigation*/
 
@@ -216,7 +219,7 @@ iframe:hover {
     background-image: url("images/meet-the-creators-background.png");
     text-align: center;
     width: 100%;
-    height: 75rem;
+    height: 80rem;
     text-wrap: wrap;
 }
 
@@ -245,6 +248,7 @@ iframe:hover {
 #socials img:hover {
     border: 5px solid #FFF;
 }
+
 
 #socials figcaption {
     font-family: 'Agbalumo';
@@ -349,6 +353,29 @@ iframe:hover {
     font-size: 85px;
     font-family: 'DM Sans';
     text-shadow: #cc004e 5px 5px 10px;
+}
+
+.project-summary-paragraph {
+    display: inline-block;
+    font-family: 'DM Sans';
+    font-size: 25px;
+    font-weight: 800;
+    color: #cc004e;
+    width: 75%;
+    padding: 2rem 0;
+    text-shadow: #000 1px 1px 1px,
+                 #000 -1px -1px 1px,
+                 #000 1px -1px 1px,
+                 #000 -1px 1px 1px,
+                 #000 0px -1px 1px,
+                 #000 0px 1px 1px,
+                 #000 -1px 0px 1px,
+                 #000 1px 0px 1px;
+}
+
+.project-summary-paragraph h1 {
+    vertical-align: middle;
+    text-align: center;
 }
 
 /*#endregion*/
