@@ -21,7 +21,7 @@
 /*#region Navigation*/
 
 .navbar {
-    font-size: 2.25rem;
+    font-size: 225%;
 }
 
 #navigation {
@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
     top: 0;
-    height: 4rem;
+    height: 7%;
     width: 100%;
     border: 2px solid black;
     z-index: 10000;
@@ -42,28 +42,28 @@
 a.navbarlink {
     font-family: 'Agbalumo';
     color: #000;
-    text-shadow: #FFF 2px 2px 5px,
-                 #FFF -2px -2px 5px,
-                 #FFF 2px -2px 5px,
-                 #FFF -2px 2px 5px,
-                 #FFF 2px 0px 5px,
-                 #FFF -2px 0px 5px,
-                 #FFF 0px -2px 5px,
-                 #FFF 0px 2px 5px;
+    text-shadow: #FFF 1px 1px 5px,
+                 #FFF -1px -1px 5px,
+                 #FFF 1px -1px 5px,
+                 #FFF -1px 1px 5px,
+                 #FFF 1px 0px 5px,
+                 #FFF -1px 0px 5px,
+                 #FFF 0px -1px 5px,
+                 #FFF 0px 1px 5px;
 
     padding: 0 20px;
     text-decoration: none;
 }
 a.navbarlink:hover{
     color: #FFF;
-    text-shadow: #000 2px 2px 10px,
-                 #000 -2px -2px 10px,
-                 #000 -2px 2px 10px,
-                 #000 2px -2px 10px,
-                 #000 0px 2px 10px,
-                 #000 2px 0px 10px,
-                 #000 -2px 0px 10px,
-                 #000 0px -2px 10px;
+    text-shadow: #000 1px 1px 10px,
+                 #000 -1px -1px 10px,
+                 #000 -1px 1px 10px,
+                 #000 1px -1px 10px,
+                 #000 0px 1px 10px,
+                 #000 1px 0px 10px,
+                 #000 -1px 0px 10px,
+                 #000 0px -1px 10px;
 }
 
 /*#endregion*/
@@ -103,7 +103,7 @@ hr {
                  #000 0px 1px;
     width: 100%;
     font-family: 'Maname', serif;
-    font-size: 6rem;
+    font-size: 600%;
 }
 
 /*#region Newest Content*/
@@ -111,7 +111,7 @@ hr {
 #newest-content {
     background-image: url("images/new-content-background.png");
     padding: 20px 0 0 0;
-    height: 60rem;
+    height: 120vh;
 }
 
 #Super-Paxton-Palace {
@@ -135,7 +135,7 @@ hr {
                  #703269 3px 0px;
     text-align: center;
     font-family: 'Harlow Solid Italic';
-    font-size: 85px;
+    font-size: 425%;
 }
 iframe {
     border: 1px solid black;
@@ -153,17 +153,17 @@ iframe:hover {
     background-image: url("images/meet-the-creators-background.png");
     text-align: center;
     width: 100%;
-    height: 150rem;
+    height: 500%;
 }
 
 .meet-the-creators-paragraph{
     display: inline-block;
     font-family: 'DM Sans';
-    font-size: 45px;
+    font-size: 250%;
     font-weight: 800;
     color: #cc004e;
     width: 75%;
-    padding: 5rem 0;
+    padding: 3% 0;
     text-shadow: #000 1px 1px 1px,
                  #000 -1px -1px 1px,
                  #000 1px -1px 1px,
@@ -172,6 +172,10 @@ iframe:hover {
                  #000 0px 1px 1px,
                  #000 -1px 0px 1px,
                  #000 1px 0px 1px;
+}
+
+.meet-the-creators-paragraph span {
+    padding: 20px 0;
 }
 
 .headshot-img {
@@ -193,7 +197,7 @@ iframe:hover {
     vertical-align: middle;
     text-align: center;
     font-family: 'Agbalumo';
-    font-size: 5rem;
+    font-size: 500%;
     color: #cc004e;
     text-shadow: #000 2px 2px,
                  #000 0px 2px,
@@ -219,7 +223,7 @@ iframe:hover {
     background-image: url("images/meet-the-creators-background.png");
     text-align: center;
     width: 100%;
-    height: 80rem;
+    height: 200%;
     text-wrap: wrap;
 }
 
@@ -273,7 +277,7 @@ iframe:hover {
     background: blueviolet;
     text-align: center;
     width: 100%;
-    height: 200rem;
+    height: 500%;
     text-wrap: wrap;
 }
 
@@ -283,14 +287,18 @@ iframe:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 4rem;
-    height: 4rem;
+    top: 6.5%;
+    height: 7%;
     width: 100%;
     border: 2px solid black;
 }
 
 #project-list-container{
     padding: 100px 0 0 0;
+}
+
+#project-list-container figure {
+    padding: 20px 0;
 }
 
 #project-list-container a img {
@@ -355,14 +363,14 @@ iframe:hover {
     text-shadow: #cc004e 5px 5px 10px;
 }
 
-.project-summary-paragraph {
+.project-paragraph {
     display: inline-block;
     font-family: 'DM Sans';
     font-size: 25px;
     font-weight: 800;
     color: #cc004e;
     width: 75%;
-    padding: 2rem 0;
+    padding: 1% 0;
     text-shadow: #000 1px 1px 1px,
                  #000 -1px -1px 1px,
                  #000 1px -1px 1px,
@@ -373,22 +381,41 @@ iframe:hover {
                  #000 1px 0px 1px;
 }
 
-.project-summary-paragraph h1 {
+#enlarged-link{
+    color: rgb(0, 201, 0);
+    font-size: 150%;
+}
+#enlarged-link a {
+    text-decoration: none;
+}
+
+#enlarged-link a:visited{
+    color: rgb(0, 201, 0);
+}
+#enlarged-link a:hover{
+    color: white;
+}
+.project-paragraph h1 {
     vertical-align: middle;
     text-align: center;
 }
 
+.trailer-holder iframe {
+    margin-top: 2%;
+}
+
+
 /*#endregion*/
 
 #top-link {
-    font-size: 2rem;
+    font-size: 200%;
     position: sticky;
     top: 90%;
     z-index: 100;
     height: 0px;
 }
 #top-link a {
-    padding: 35px;
+    margin: 35px;
 }
 
 /*#endregion*/
@@ -398,7 +425,6 @@ iframe:hover {
 footer {
     position: relative;
     bottom: 0;
-    height: 2rem;
     text-align: center;
     vertical-align: middle;
     align-content: center;
