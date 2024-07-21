@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
+    top: 0%;
     height: 7%;
     width: 100%;
     border: 2px solid black;
@@ -114,28 +114,59 @@ hr {
     height: 120vh;
 }
 
+#new-content-holder {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 #Super-Paxton-Palace {
+    padding: 50px 50px 0 0;
+    text-align: center;
+    align-self: center;
+    vertical-align: middle;
+}
+
+#acorn-bounty-trailer {
     padding: 50px 0 0 0;
     text-align: center;
     align-self: center;
     vertical-align: middle;
 }
 
+#acorn-bounty-trailer-label {
+    display: block;
+    color: #00ca5b;
+    padding: 0 0 20px 0;
+    text-shadow: #007544 3px 3px 2px,
+                 #007544 -3px -3px 2px,
+                 #007544 -3px 0px 2px,
+                 #007544 0px -3px 2px,
+                 #007544 3px -3px 2px,
+                 #007544 -3px 3px 2px,
+                 #007544 0px 3px 2px,
+                 #007544 3px 0px 2px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: 'Jaini';
+    font-size: 325%;
+}
+
 #spp-trailer-label {
     display: block;
     color: #f9a7d3;
-    padding: 0 0 20px 0;
-    text-shadow: #703269 3px 3px,
-                 #703269 -3px -3px,
-                 #703269 -3px 0px,
-                 #703269 0px -3px,
-                 #703269 3px -3px,
-                 #703269 -3px 3px,
-                 #703269 0px 3px,
-                 #703269 3px 0px;
+    padding: 0 20px 20px 0;
+    text-shadow: #703269 3px 3px 2px,
+                 #703269 -3px -3px 2px,
+                 #703269 -3px 0px 2px,
+                 #703269 0px -3px 2px,
+                 #703269 3px -3px 2px,
+                 #703269 -3px 3px 2px,
+                 #703269 0px 3px 2px,
+                 #703269 3px 0px 2px;
     text-align: center;
     font-family: 'Harlow Solid Italic';
-    font-size: 425%;
+    font-size: 325%;
 }
 iframe {
     border: 1px solid black;
@@ -283,14 +314,18 @@ iframe:hover {
 
 #projects-navigation {
     background: cornflowerblue;
-    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 6.5%;
     height: 7%;
     width: 100%;
     border: 2px solid black;
+}
+
+#projects-navigation-holder {
+    padding-top: 3%;
+    position: sticky;
+    top: 0;
 }
 
 #project-list-container{
@@ -329,27 +364,40 @@ iframe:hover {
 
 #project-nav-header-paxton {
     color: #f9a7d3;
-    text-shadow: #703269 3px 3px,
-                 #703269 -3px -3px,
-                 #703269 -3px 0px,
-                 #703269 0px -3px,
-                 #703269 3px -3px,
-                 #703269 -3px 3px,
-                 #703269 0px 3px,
-                 #703269 3px 0px;
+    text-shadow: #703269 3px 3px 2px,
+                 #703269 -3px -3px 2px,
+                 #703269 -3px 0px 2px,
+                 #703269 0px -3px 2px,
+                 #703269 3px -3px 2px,
+                 #703269 -3px 3px 2px,
+                 #703269 0px 3px 2px,
+                 #703269 3px 0px 2px;
     font-family: 'Harlow Solid Italic';
 }
 #project-nav-header-mhih {
     color: #703269;
-    text-shadow: #FFF 3px 3px 3px,
-                 #FFF -3px -3px 3px,
-                 #FFF -3px 0px 3px,
-                 #FFF 0px -3px 3px,
-                 #FFF 3px -3px 3px,
-                 #FFF -3px 3px 3px,
-                 #FFF 0px 3px 3px,
-                 #FFF 3px 0px 3px;
+    text-shadow: #FFF 3px 3px 2px,
+                 #FFF -3px -3px 2px,
+                 #FFF -3px 0px 2px,
+                 #FFF 0px -3px 2px,
+                 #FFF 3px -3px 2px,
+                 #FFF -3px 3px 2px,
+                 #FFF 0px 3px 2px,
+                 #FFF 3px 0px 2px;
     font-family: serif;
+}
+#project-nav-header-acorn-bounty {
+    color: #1db100;
+    text-shadow: #007544 3px 3px 2px,
+                 #007544 -3px -3px 2px,
+                 #007544 -3px 0px 2px,
+                 #007544 0px -3px 2px,
+                 #007544 3px -3px 2px,
+                 #007544 -3px 3px 2px,
+                 #007544 0px 3px 2px,
+                 #007544 3px 0px 2px;
+    letter-spacing: 3px;
+    font-family: 'Jaini';
 }
 
 #project-list-container img {
@@ -435,6 +483,18 @@ footer {
 footer b {
     text-align: center;
     vertical-align: middle;
+}
+
+footer a {
+    color: darkblue;
+}
+
+footer a:visited {
+    color: darkblue;
+}
+
+footer a:hover {
+    color: #FFF;
 }
 
 

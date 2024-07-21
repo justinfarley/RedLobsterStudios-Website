@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+form {
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 0 0 3% 0;
+    align-self: center;
+}
+
+input:required:valid {
+    border: 2px solid green;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:required:focus:valid {
+    background: /*url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg")*/ no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+}
+
+input {
+    width: 100%;
+    height: 25%;
+    font-size: 250%;
+    font-family: 'DM Sans';
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    transition: border-color 0.5s ease-out;
+}
+
+body {
+    background: url('./images/meet-the-creators-background.png');
+    height: 100vh;
+}
+
+#cb h1 {
+    padding-top: 20px;
+    font-size: 500%;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'DM Sans';
+    color: red;
+    letter-spacing: 2px;
+    text-shadow: rgb(116, 0, 0) 2px 2px,
+                 rgb(116, 0, 0) -2px -2px,
+                 rgb(116, 0, 0) 2px -2px,
+                 rgb(116, 0, 0) -2px 2px,
+                 rgb(116, 0, 0) 0px 2px,
+                 rgb(116, 0, 0) 2px 0px,
+                 rgb(116, 0, 0) 0px -2px,
+                 rgb(116, 0, 0) -2px 0px;
+}
+
+
+textarea {
+    font-family: 'DM Sans';
+    font-size: 150%;
+    width: auto;
+    height: 25%;
+    resize: none;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+
+#submit {
+    height: auto;
+    margin: 0;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+    background-color: crimson;
+    border: 1px solid black;
+}
+
+footer b {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+#rls-footer-text {
+    font-family: 'DM Sans', serif;
+    display: inline;
+}
+
+#rls-footer-text a {
+    color: darkblue;
+}
+
+#rls-footer-text a:visited {
+    color: darkblue;
+}
+
+#rls-footer-text a:hover {
+    color: #FFF;
+}
