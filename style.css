@@ -370,6 +370,10 @@ iframe:hover {
     padding-top: 50px;
 }
 
+#project-list-container figure figcaption {
+    font-size: 85px;
+}
+
 #project-nav-header-paxton {
     color: #f9a7d3;
     text-shadow: #703269 3px 3px 2px,
@@ -401,6 +405,15 @@ iframe:hover {
     font-family: 'Jaini';
 }
 
+#acorn-steam-embed {
+    border: none;
+}
+
+.tiktok-embed {
+    max-width: 780px;
+    min-width: 288px;
+}
+
 #project-list-container img {
     width: 60%;
     height: 15%;
@@ -428,6 +441,11 @@ iframe:hover {
                  #000 0px 1px 1px,
                  #000 -1px 0px 1px,
                  #000 1px 0px 1px;
+}
+
+.inline-span-project-paragraph {
+    color: red; 
+    font-size: 150%;
 }
 
 #enlarged-link{
@@ -515,6 +533,139 @@ footer a:hover {
 #rls-footer-text {
     font-family: 'DM Sans', serif;
     display: inline;
+}
+
+
+/*#endregion*/
+
+
+/*#region MOBILE*/
+
+
+@media only screen and (max-width: 600px){
+
+    .navbar {
+        font-size: 65%;
+    }
+
+    a.navbarlink {
+        padding: 10px;
+    }
+
+    .header-text {
+        font-size: 50px;
+    }
+
+    #new-content-holder {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        text-align: center;
+    }
+    #new-content-holder div {
+        width: 320px;
+        height: 180px;
+        padding: 100px 0 150px 0;
+    }
+
+    #spp-trailer-label {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #acorn-bounty-trailer-label{
+        font-size: 22px;
+    }
+
+    #SPP-TRAILER-2 {
+        width: 320px;
+        height: 180px;
+    }
+
+    #ACORN-TRAILER {
+        width: 320px;
+        height: 180px;
+    }
+
+    #newest-content {
+        height: 100vh;
+    }
+
+    .creator-figure img {
+        width: 10rem;
+        height: 10rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .sub-header {
+        font-size: 300%;
+        width: 100%;
+    }
+    .creator-header-figure-text{
+        width: 100%;
+    }
+    .meet-the-creators-paragraph{
+        width: 90%;
+    }
+
+    .meet-the-creators-paragraph{
+        display: inline-block;
+        font-family: 'DM Sans';
+        font-size: 150%;
+        font-weight: 800;
+        color: #cc004e;
+        width: 75%;
+    }
+
+    #social-figure-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 50px 0;
+    }
+
+    #projects-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-nav-header {
+        font-size: 8px;
+    }
+
+    #project-list-container img {
+        width: 90%;
+        height: 15%;
+    }
+
+    #project-list-container figure figcaption {
+        font-size: 40px;
+    }
+
+
+    #projects-navigation-holder {
+        top: 7px;
+    }
+
+    .project-paragraph {
+        font-size: 15px;
+    }
+
+    #SPP-GJ-EMBED{
+        width: 75vw;
+    }
+
+    #acorn-steam-embed {
+        width: 80vw;
+    }
+
+    .inline-span-project-paragraph {
+        font-size: 125%;
+    }
+
 }
 
 
