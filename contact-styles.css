@@ -44,7 +44,7 @@ input {
 }
 
 body {
-    background: url('./images/meet-the-creators-background.png');
+    background: url('./images/new-content-background.png');
     height: 100vh;
 }
 
@@ -54,7 +54,7 @@ body {
     text-align: center;
     vertical-align: middle;
     font-family: 'DM Sans';
-    color: red;
+    color: #cc004e;
     letter-spacing: 2px;
     text-shadow: rgb(116, 0, 0) 2px 2px,
                  rgb(116, 0, 0) -2px -2px,

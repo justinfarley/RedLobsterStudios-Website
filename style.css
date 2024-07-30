@@ -42,28 +42,28 @@
 a.navbarlink {
     font-family: 'Agbalumo';
     color: #000;
-    text-shadow: #FFF 1px 1px 5px,
-                 #FFF -1px -1px 5px,
-                 #FFF 1px -1px 5px,
-                 #FFF -1px 1px 5px,
-                 #FFF 1px 0px 5px,
-                 #FFF -1px 0px 5px,
-                 #FFF 0px -1px 5px,
-                 #FFF 0px 1px 5px;
+    text-shadow: #FFF 1px 1px 2px,
+                 #FFF -1px -1px 2px,
+                 #FFF 1px -1px 2px,
+                 #FFF -1px 1px 2px,
+                 #FFF 1px 0px 2px,
+                 #FFF -1px 0px 2px,
+                 #FFF 0px -1px 2px,
+                 #FFF 0px 1px 2px;
 
     padding: 0 20px;
     text-decoration: none;
 }
 a.navbarlink:hover{
     color: #FFF;
-    text-shadow: #000 1px 1px 10px,
-                 #000 -1px -1px 10px,
-                 #000 -1px 1px 10px,
-                 #000 1px -1px 10px,
-                 #000 0px 1px 10px,
-                 #000 1px 0px 10px,
-                 #000 -1px 0px 10px,
-                 #000 0px -1px 10px;
+    text-shadow: #000 1px 1px 5px,
+                 #000 -1px -1px 5px,
+                 #000 -1px 1px 5px,
+                 #000 1px -1px 5px,
+                 #000 0px 1px 5px,
+                 #000 1px 0px 5px,
+                 #000 -1px 0px 5px,
+                 #000 0px -1px 5px;
 }
 
 /*#endregion*/
@@ -180,11 +180,19 @@ iframe:hover {
 
 /*#region Meet the Creators*/
 
-#meet-the-creators{
-    background-image: url("images/meet-the-creators-background.png");
+
+#meet-the-creators-justin{
+    background-image: url("images/meet-the-creators-background-justin.png");
     text-align: center;
     width: 100%;
     height: 500%;
+}
+
+#meet-the-creators-ryan{
+    background-image: url("images/meet-the-creators-background-ryan.png");
+    text-align: center;
+    width: 100%;
+    height: 250%;
 }
 
 .meet-the-creators-paragraph{
@@ -251,7 +259,7 @@ iframe:hover {
 /*#region Socials*/
 
 #socials{
-    background-image: url("images/meet-the-creators-background.png");
+    background-image: url("images/socials-background.png");
     text-align: center;
     width: 100%;
     height: 200%;
@@ -305,7 +313,7 @@ iframe:hover {
 /*#region Projects*/
 
 #projects{
-    background: blueviolet;
+    background: url("images/projects-background.png");
     text-align: center;
     width: 100%;
     height: 500%;
@@ -375,16 +383,9 @@ iframe:hover {
     font-family: 'Harlow Solid Italic';
 }
 #project-nav-header-mhih {
-    color: #703269;
-    text-shadow: #FFF 3px 3px 2px,
-                 #FFF -3px -3px 2px,
-                 #FFF -3px 0px 2px,
-                 #FFF 0px -3px 2px,
-                 #FFF 3px -3px 2px,
-                 #FFF -3px 3px 2px,
-                 #FFF 0px 3px 2px,
-                 #FFF 3px 0px 2px;
-    font-family: serif;
+    color: black;
+    letter-spacing: 0rem;
+    font-family: monospace;
 }
 #project-nav-header-acorn-bounty {
     color: #1db100;
@@ -407,7 +408,7 @@ iframe:hover {
 
 #mhih-project-image-label {
     font-size: 85px;
-    font-family: 'DM Sans';
+    font-family: monospace;
     text-shadow: #cc004e 5px 5px 10px;
 }
 
@@ -450,6 +451,18 @@ iframe:hover {
 
 .trailer-holder iframe {
     margin-top: 2%;
+}
+
+.coming-soon-link {
+    color: red;
+}
+
+.coming-soon-link:visited{
+    color: red;
+}
+
+.coming-soon-link:hover {
+    color: white;
 }
 
 
@@ -503,5 +516,6 @@ footer a:hover {
     font-family: 'DM Sans', serif;
     display: inline;
 }
+
 
 /*#endregion*/
