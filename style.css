@@ -566,7 +566,7 @@ footer a:hover {
     #new-content-holder div {
         width: 320px;
         height: 180px;
-        padding: 100px 0 150px 0;
+        padding: 150px 0 150px 0;
     }
 
     #spp-trailer-label {
@@ -637,8 +637,8 @@ footer a:hover {
     }
 
     #project-list-container img {
-        width: 90%;
-        height: 15%;
+        width: 80vw;
+        height: 20vw;
     }
 
     #project-list-container figure figcaption {
