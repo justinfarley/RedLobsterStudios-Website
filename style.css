@@ -562,11 +562,13 @@ footer a:hover {
         align-self: center;
         align-items: center;
         text-align: center;
+        padding: 0;
     }
     #new-content-holder div {
         width: 320px;
         height: 180px;
-        padding: 150px 0 150px 0;
+        padding: 0;
+        margin: 50px 0 100px 0;
     }
 
     #spp-trailer-label {
@@ -589,7 +591,7 @@ footer a:hover {
     }
 
     #newest-content {
-        height: 100vh;
+        height: 130vh;
     }
 
     .creator-figure img {
