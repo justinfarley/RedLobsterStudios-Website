@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    align-self: center;
+}
+
+
+div {
+    width: 50%;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+hr {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #8a0035;
+    margin-bottom: 15px;
+}
+
+ul{
+    list-style-position: inside;
+    padding-bottom: 15px;
+}
+
+.version-header {
+    list-style-type: square;
+    list-style: circle;
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+.version-description {
+    text-align: left;
+    vertical-align: middle;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background: url('./images/new-content-background.png');
+    height: 100vh;
+}
+
+#cb h1 {
+    padding-top: 20px;
+    font-size: 500%;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'DM Sans';
+    color: #cc004e;
+    letter-spacing: 2px;
+    text-shadow: rgb(116, 0, 0) 2px 2px,
+                 rgb(116, 0, 0) -2px -2px,
+                 rgb(116, 0, 0) 2px -2px,
+                 rgb(116, 0, 0) -2px 2px,
+                 rgb(116, 0, 0) 0px 2px,
+                 rgb(116, 0, 0) 2px 0px,
+                 rgb(116, 0, 0) 0px -2px,
+                 rgb(116, 0, 0) -2px 0px;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+    background-color: crimson;
+    border: 1px solid black;
+}
+
+footer b {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+#rls-footer-text {
+    font-family: 'DM Sans', serif;
+    display: inline;
+}
+
+#rls-footer-text a {
+    color: darkblue;
+}
+
+#rls-footer-text a:visited {
+    color: darkblue;
+}
+
+#rls-footer-text a:hover {
+    color: #FFF;
+}
+
+/*MOBILE VERSION*/
+
+@media only screen and (max-width: 600px){
+    #cb h1 {
+        font-size: 200%;
+    }
+
+    textarea {
+        height: 200px;   
+        font-size: medium;
+    }
+
+    input {
+        font-size: x-large;
+    }
+
+}
