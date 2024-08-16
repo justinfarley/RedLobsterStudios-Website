@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: antiquewhite;
 }
 
 section {
@@ -60,8 +59,8 @@ ul{
 }
 
 body {
-    background: url('./images/new-content-background.png');
     height: 100vh;
+    background-color: antiquewhite;
 }
 
 #cb h1 {
