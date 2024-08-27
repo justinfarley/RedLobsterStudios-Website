@@ -12,6 +12,41 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
         <link rel="manifest" href="./favicons/site.webmanifest">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.querySelector('form');
+                const submitButton = document.getElementById('submit');
+
+                form.addEventListener('submit', function(e) {
+                    const lastSubmitTime = localStorage.getItem('lastSubmitTimeRLSW');
+                    const currentTime = new Date().getTime();
+
+                    if (lastSubmitTime && currentTime - lastSubmitTime < 600000) { // 600000 ms = 10 minutes
+                        e.preventDefault();
+                        alert('Please wait 10 minutes before submitting again.');
+                    } else {
+                        localStorage.setItem('lastSubmitTimeRLSW', currentTime);
+                    }
+                });
+
+                // Check on page load if the button should be disabled
+                function updateButtonState() {
+                    const lastSubmitTime = localStorage.getItem('lastSubmitTimeRLSW');
+                    const currentTime = new Date().getTime();
+
+                    if (lastSubmitTime && currentTime - lastSubmitTime < 600000) {
+                        submitButton.disabled = true;
+                        submitButton.value = 'Try again in 10 minutes';
+                        setTimeout(updateButtonState, 1000); // Check every second
+                    } else {
+                        submitButton.disabled = false;
+                        submitButton.value = 'SUBMIT';
+                    }
+                }
+
+                updateButtonState();
+            });
+        </script>
     </head>
     <body id="cb">
         <h1>Contact Red Lobster Studios</h1>
