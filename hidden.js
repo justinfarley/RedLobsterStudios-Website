@@ -90,4 +90,5 @@
             lobster.style.animation = `fall linear infinite ${Math.random() * 2 + 3}s, rotate linear infinite ${Math.random() * 2 + 1}s`;
             document.body.appendChild(lobster);
         }
+        
     });
