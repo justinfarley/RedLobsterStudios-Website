@@ -1,15 +1,13 @@
     document.addEventListener('DOMContentLoaded', function() {
 
-        const navbarLinks = document.querySelectorAll('a'); //all links
-        navbarLinks.forEach(link => {
-            if(link.getAttribute('href').substring(0, 1) == '#'){
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            }
+        const navbarLinks = Array.from(document.querySelectorAll('a')); //all links
+        navbarLinks.filter(link => link.getAttribute('href').substring(0, 1) == '#').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
         });
 
         const headerText = document.getElementById('newest-content-header-text');
