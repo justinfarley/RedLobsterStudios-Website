@@ -35,6 +35,16 @@
             requestAnimationFrame(animate);
         }
 
+        document.querySelectorAll('.hover-effect').forEach(img => {
+            img.addEventListener('mouseover', () => {
+                img.style.transform = 'scale(1.2)';
+                img.style.transition = 'transform 0.3s ease';
+            });
+            img.addEventListener('mouseout', () => {
+                img.style.transform = 'scale(1)';
+            });
+        });
+
         function changeColor() {
             const startColor = hexToRgb(colors[colorIndex]);
             const endColor = hexToRgb(colors[(colorIndex + 1) % colors.length]);
@@ -141,9 +151,7 @@
         document.head.appendChild(style);
     }
 
-    // Call the function to update the animation
     updateShakeAnimation();
 
-    // Optionally, update the animation periodically
-    setInterval(updateShakeAnimation, 5000); // Update every 5 seconds
+    setInterval(updateShakeAnimation, 5000);
     });
