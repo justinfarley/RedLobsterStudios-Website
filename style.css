@@ -12,6 +12,20 @@
     src: local('Harlow Solid Italic'), url('Fonts/HARLOWSI_1.woff') format('woff');
 }
 
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.falling-lobster {
+    position: fixed;
+    top: -50px;
+    font-size: 30px;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
+
 /*#endregion*/
 
 .test {
