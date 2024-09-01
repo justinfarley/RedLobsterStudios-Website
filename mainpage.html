@@ -15,6 +15,17 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
+            const navbarLinks = document.querySelectorAll('.navbarlink');
+            navbarLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+
             const headerText = document.getElementById('newest-content-header-text');
             const colors = ['#c30010', '#f94449', '#ff0000'];
             let colorIndex = 0;
@@ -113,14 +124,22 @@
         }
     </style>
 
-    <body>
+    <body id="top">
         <div id="navigation">
             <nav id="navbar" class="navbar" aria-label="Navigation">
                 <a class="navbarlink" href="#newest-content">Newest Content</a>
                 <a class="navbarlink" href="#meet-the-creators-justin">Meet the Creators</a>
                 <a class="navbarlink" href="#socials">Socials</a>
                 <a class="navbarlink" href="#projects">Projects</a>
+
             </nav>
+            <script>
+                function smoothScroll(event, targetId) {
+                    event.preventDefault();
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            </script>
         </div>
 
         
