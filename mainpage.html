@@ -13,6 +13,106 @@
         <link rel="manifest" href="./favicons/site.webmanifest">
     </head>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerText = document.getElementById('newest-content-header-text');
+            const colors = ['#c30010', '#f94449', '#ff0000'];
+            let colorIndex = 0;
+
+            function fadeToColor(startColor, endColor, duration) {
+                let startTime = null;
+                function animate(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const progress = (currentTime - startTime) / duration;
+
+                    if (progress < 1) {
+                        const r = Math.round(startColor.r + (endColor.r - startColor.r) * progress);
+                        const g = Math.round(startColor.g + (endColor.g - startColor.g) * progress);
+                        const b = Math.round(startColor.b + (endColor.b - startColor.b) * progress);
+                        headerText.style.color = `rgb(${r}, ${g}, ${b})`;
+                        requestAnimationFrame(animate);
+                    } else {
+                        headerText.style.color = `rgb(${endColor.r}, ${endColor.g}, ${endColor.b})`;
+                        colorIndex = (colorIndex + 1) % colors.length;
+                        setTimeout(changeColor, 250);
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+
+            function changeColor() {
+                const startColor = hexToRgb(colors[colorIndex]);
+                const endColor = hexToRgb(colors[(colorIndex + 1) % colors.length]);
+                fadeToColor(startColor, endColor, 250);
+            }
+
+            function hexToRgb(hex) {
+                const bigint = parseInt(hex.slice(1), 16);
+                return {
+                    r: (bigint >> 16) & 255,
+                    g: (bigint >> 8) & 255,
+                    b: bigint & 255
+                };
+            }
+
+            changeColor();
+
+            let secretCode = '';
+            const targetCode = 'redlobsterstudios';
+
+            document.addEventListener('keydown', function(e) {
+                secretCode += e.key.toLowerCase();
+                if (secretCode.length > targetCode.length) {
+                    secretCode = secretCode.slice(-targetCode.length);
+                }
+                if (secretCode === targetCode) {
+                    funStuffHappens();
+                }
+            });
+
+            function funStuffHappens() {
+                headerText.style.fontSize = '5em';
+                headerText.style.transition = 'font-size 1s ease-in-out';
+                
+                for (let i = 0; i < 20; i++) {
+                    createFallingLobster();
+                }
+
+                // Reset after 5 seconds
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                    headerText.style.fontSize = '';
+                    document.querySelectorAll('.falling-lobster').forEach(el => el.remove());
+                }, 20000);
+            }
+
+            function createFallingLobster() {
+                const lobster = document.createElement('div');
+                lobster.className = 'falling-lobster';
+                lobster.style.left = `${Math.random() * 100}vw`;
+                lobster.style.animationDuration = `${Math.random() * 2 + 3}s`;
+                lobster.innerHTML = '🦞';
+                lobster.style.animation = `fall linear infinite ${Math.random() * 2 + 3}s, rotate linear infinite ${Math.random() * 2 + 1}s`;
+                document.body.appendChild(lobster);
+            }
+        });
+    </script>
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .falling-lobster {
+            position: fixed;
+            top: -50px;
+            font-size: 30px;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+    </style>
+
     <body>
         <div id="navigation">
             <nav id="navbar" class="navbar" aria-label="Navigation">
@@ -20,7 +120,6 @@
                 <a class="navbarlink" href="#meet-the-creators-justin">Meet the Creators</a>
                 <a class="navbarlink" href="#socials">Socials</a>
                 <a class="navbarlink" href="#projects">Projects</a>
-                <a class="navbarlink" href="#bottom">Bottom</a>
             </nav>
         </div>
 
@@ -475,7 +574,12 @@
             <hr>
 
         </section>
-        <h1 style="text-align: center; font-family: 'DM Sans'; font-size: 15px" id="bottom">You have reached the end.</h1>
+        
+        <h1 style="font-family: 'DM Sans'; font-size: 15px; text-align: center;" id="bottom">
+            You have reached the end.
+            <br>
+            <span style="display: inline-block; opacity: 0.2;">Type "redlobsterstudios" for a surprise!</span>
+        </h1>
         <footer id="bottom">
             <div id="rls-footer-text">
                 <b><a href="./contactrls.html">Contact Us</a> - © Red Lobster Studios</b>
