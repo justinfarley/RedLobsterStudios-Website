@@ -90,5 +90,60 @@
             lobster.style.animation = `fall linear infinite ${Math.random() * 2 + 3}s, rotate linear infinite ${Math.random() * 2 + 1}s`;
             document.body.appendChild(lobster);
         }
-        
+    // Function to generate random shake values
+    function getRandomShake() {
+        const intensity = Math.random() * 3 + 1; // Random intensity between 1 and 4
+        return {
+            x: (Math.random() - 0.5) * intensity,
+            y: (Math.random() - 0.5) * intensity,
+            rotate: (Math.random() - 0.5) * intensity
+        };
+    }
+
+    // Update the shake animation
+    function updateShakeAnimation() {
+        const style = document.createElement('style');
+        const shakingElements = document.querySelectorAll('.shaking-text');
+        let styleContent = '';
+
+        shakingElements.forEach((element, index) => {
+            const text = element.textContent;
+            element.textContent = ''; // Clear the original text
+            
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                if (text[i] === ' ') {
+                    span.style.display = 'inline-block';
+                    span.style.width = '0.25em'; // Adjust this value as needed
+                }
+                element.appendChild(span);
+
+                const keyframes = [];
+                for (let j = 0; j <= 100; j += 10) {
+                    const { x, y, rotate } = getRandomShake();
+                    keyframes.push(`${j}% { transform: translate(${x}px, ${y}px) rotate(${rotate}deg); }`);
+                }
+
+                styleContent += `
+                    @keyframes shake${index}_${i} {
+                        ${keyframes.join('\n')}
+                    }
+                    .shaking-text:nth-of-type(${index + 1}) span:nth-child(${i + 1}) {
+                        display: inline-block;
+                        animation: shake${index}_${i} 0.5s infinite;
+                    }
+                `;
+            }
+        });
+
+        style.textContent = styleContent;
+        document.head.appendChild(style);
+    }
+
+    // Call the function to update the animation
+    updateShakeAnimation();
+
+    // Optionally, update the animation periodically
+    setInterval(updateShakeAnimation, 5000); // Update every 5 seconds
     });
