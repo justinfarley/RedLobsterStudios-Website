@@ -189,10 +189,34 @@ body {
 
 hr {
     height: 10px;
-    border: 0px;
-    background-color: #703269;
-    background-image: linear-gradient(to right, rgb(129, 0, 0), transparent, rgb(129, 0, 0)), 
-    linear-gradient(transparent, rgba(0,0,0,0.55) 150%);
+    border: 0;
+    background: linear-gradient(90deg, #703269, #cc004e, #703269);
+    background-size: 200% 100%;
+    animation: gradientShift 5s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+hr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 .header-text{
@@ -220,8 +244,21 @@ hr {
 
 #newest-content {
     background-image: url("images/new-content-background.png");
-    padding: 20px 0 0 0;
     height: 120vh;
+    text-wrap: wrap;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+    padding: 20px 0 0 0;
+    animation: moveBackgroundVertically 30s linear infinite;
+}
+@keyframes moveBackgroundVertically {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
 }
 
 #new-content-holder {
@@ -296,6 +333,23 @@ iframe:hover {
     text-align: center;
     width: 100%;
     height: 500%;
+    text-wrap: wrap;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+    padding: 20px 0 0 0;
+    animation: moveBackgroundVertically 30s linear infinite;
+}
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #meet-the-creators-ryan{
@@ -303,7 +357,23 @@ iframe:hover {
     text-align: center;
     width: 100%;
     height: 250%;
+    height: 120vh;
+    text-wrap: wrap;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+    padding: 20px 0 0 0;
+    animation: moveBackgroundVertically 10s linear infinite;
 }
+@keyframes moveBackgroundVertically {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
+}
+
 
 .meet-the-creators-paragraph{
     display: inline-block;
@@ -368,12 +438,25 @@ iframe:hover {
 
 /*#region Socials*/
 
-#socials{
+#socials {
     background-image: url("images/socials-background.png");
     text-align: center;
     width: 100%;
     height: 200%;
     text-wrap: wrap;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+    padding: 20px 0 0 0;
+    animation: moveBackgroundVertically 30s linear infinite;
+}
+@keyframes moveBackgroundVertically {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
 }
 
 #social-figure-holder {
@@ -422,13 +505,27 @@ iframe:hover {
 
 /*#region Projects*/
 
-#projects{
+#projects {
     background: url("images/projects-background.png");
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
     text-align: center;
     width: 100%;
     height: 500%;
     text-wrap: wrap;
+    animation: moveBackground 300s linear infinite;
 }
+
+@keyframes moveBackground {
+    from {
+        background-position: center top;
+    }
+    to {
+        background-position: center bottom;
+    }
+}
+
 
 #projects-navigation {
     background: cornflowerblue;
