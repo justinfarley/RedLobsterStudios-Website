@@ -23,6 +23,43 @@
     animation: fall linear infinite;
 }
 
+.floating-text {
+    position: absolute;
+    top: 20%;
+    left: 85%;
+    transform: translateX(-50%) rotate(15deg);
+    background-color: #00ca72;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Jaini';
+    letter-spacing: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    animation: float-and-rotate 2s ease-in-out infinite;
+}
+
+@keyframes float-and-rotate {
+    0%, 100% { transform: translateX(-50%) translateY(0) rotate(15deg); }
+    50% { transform: translateX(-50%) translateY(-10px) rotate(15deg); }
+}
+
+.floating-text:hover {
+    animation: none;
+    transform: translateX(-50%) rotate(15deg) scale(1.1);
+}
+
+.floating-text:hover {
+    transform: translateX(-50%) rotate(15deg) scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0px) scale(1); }
+    50% { transform: translateX(-50%) translateY(-10px) scale(1); }
+}
 
 .shaking-text {
     display: inline-block;
@@ -752,6 +789,9 @@ footer a:hover {
 
     .inline-span-project-paragraph {
         font-size: 125%;
+    }
+    .floating-text {
+        display: none; 
     }
 
 }
