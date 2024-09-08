@@ -250,7 +250,7 @@ hr::before {
     background-repeat: repeat-y;
     background-position: center top;
     padding: 20px 0 0 0;
-    animation: moveBackgroundVertically 30s linear infinite;
+    animation: moveBackgroundVertically 10s linear infinite;
 }
 @keyframes moveBackgroundVertically {
     0% {
