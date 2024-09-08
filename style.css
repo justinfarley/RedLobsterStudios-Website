@@ -28,9 +28,10 @@
     top: 16%;
     left: 85%;
     transform: translateX(-50%) rotate(15deg);
-    background-color: #00ca72;
+    background: radial-gradient(circle, #5fc394 0%,#5fc394 35%, #00ff91 100%);
     color: black;
     padding: 10px 20px;
+    border: 6px solid  rgb(0, 123, 72);
     border-radius: 20px;
     font-size: 25px;
     font-weight: bold;
