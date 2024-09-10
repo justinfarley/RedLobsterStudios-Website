@@ -528,7 +528,7 @@ iframe:hover {
 
 
 #projects-navigation {
-    background: cornflowerblue;
+    background: rgb(166, 0, 255);
     display: flex;
     justify-content: center;
     align-items: center;
